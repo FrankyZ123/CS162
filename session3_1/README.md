@@ -193,7 +193,7 @@ class Class:
         self.staff = []
     
     def add(self, toWhat=str(), what):
-        if not toWhat:
+        if not toWhat in ['student', 'teacher', 'staff']:
             print("Yikes, you didn't specify WHAT to add to")
             break
         else:
@@ -205,7 +205,7 @@ class Class:
             ...
     
     def remove(self, fromWhat=str(), what):
-        if not fromWhat:
+        if not fromWhat in ['student', 'teacher', 'staff']:
             print("Yikes, you didn't specify WHAT to remove from")
             break
         else:
