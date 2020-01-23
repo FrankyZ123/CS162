@@ -291,6 +291,19 @@ The above code will not work on lists or strings unless some conversion is done 
 
 This does not violate Liskov Substitution principle because the string / list objects extend listobject.c and float / int object extend floatobject.c in the [source code for python](https://github.com/python/cpython/tree/master/Objects).
 
-### 4. (Optional) Multiple inheritance bug
+### 4Q. (Optional) Multiple inheritance bug
 There is a subtle bug in the initialization of a tomato.  Identify the bug,
 and then fix the bug!
+
+### 4A. (Optional) Multiple inheritance bug
+Ahh the classific multiple inheritance bug.
+
+```python
+class Tomato(Fruit, Vegetable):
+    def __init__(self, name='Tomato', weight_kg=3.0):
+        super(Tomato, self).__init__(name=name, weight_kg=weight_kg)
+
+
+t = Tomato()
+print(t)
+```
