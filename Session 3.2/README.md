@@ -56,30 +56,31 @@ class BlankClass(builtins.object)
  |  
  |  __weakref__
  |      list of weak references to the object (if defined)
+ #list of attributes with structure
 ```
 
  2. type(t)
 
 ```bash
-<class '__main__.BlankClass'>
+<class '__main__.BlankClass'> #type of object
 ```
 
  3. dir(t)
 
 ```bash
-['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__'] #object attributes
 ```
 
  4. hash(t)
 
 ```bash
-284374193
+284374193 #access to location on disk
 ```
 
  5. id(t)
 
 ```bash
-4549987088
+4549987088 #location on disk
 ```
 
  6. hasattr(my_attr,'x3')
