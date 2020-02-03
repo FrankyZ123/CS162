@@ -110,7 +110,7 @@ True #test if object has 'x3' in it
 10. bool(t)
 
 ```bash
-True
+True #pointer is not empty, points to object (i.e. Null is not passed)
 ```
 
 *Come to class able to give clear explanations of what is going on in each of
@@ -176,7 +176,6 @@ PanedWindow: {Widget}
 one can call on that widget.
 
 ```text
-
 STANDARD OPTIONS
     activebackground, activeforeground, anchor,
     background, bitmap, borderwidth, cursor,

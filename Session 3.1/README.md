@@ -185,78 +185,58 @@ in ALF.)
 ### A1. Identity Access Management – IAM
 
 ```python
-class Class:
-    def __init__(self, class_):
-        self.class_ = str
-        self.students = []
-        self.teachers = []
-        self.staff = []
-    
-    def add(self, toWhat=str(), what):
-        if not toWhat in ['student', 'teacher', 'staff']:
-            print("Yikes, you didn't specify WHAT to add to")
-            break
-        else:
-            if toWhat=='student':
-                try:
-                    self.students.append(what)
-                    print("Appended {} as a {} for class {}".format(what, toWhat, self.class_))
-            ...
-            ...
-    
-    def remove(self, fromWhat=str(), what):
-        if not fromWhat in ['student', 'teacher', 'staff']:
-            print("Yikes, you didn't specify WHAT to remove from")
-            break
-        else:
-            if fromWhat=='student':
-                try:
-                    self.students.append(what)
-                    print("Removed {} as a {} for class {}".format(what, fromWhat, self.class_))
-            ...
-            ...
-
 class User:
-    def __init__(self, Class, user): #Class is class object specified above, user is UUID for user as stored in class
-        self.type = userType()
-        self.permissions = persmissions()
+    def __init__(self):
+        self.classes = {} #dict of classes user has access to w/ type
+        self.email = str
     
-    @staticmethod
-    def userType():
-        try:
-            if user in Class.students:
-                return "Student"
-            elif user in Class.teachers:
-                return "Teacher"
-            elif user in Class.staff:
-                return "Staff:
-            else:
-                print("Yikies, user not in passed Class object")
-        except:
-            print("Yikies, looks like you got an error :/")
+    def profile_picture(self):
+        '''
+        Allows user of any type to upload profile picture to ALF
+        '''
+        filepath = input("Feel free to print here your local path to the profile pic you'd like")
+
+        with open(filepath, "r") as img_:
+            img = img.read(img_)
     
-    def permissions(self):
-        permissions = {
-            canSendToBreakouts : False
-            canMute : False
-            hasStar : False
-            superUser : False
-            studentView : False
-            ...
-        }
-
-        if self.type == "Student":
-            permissions['studentView'] = True
-            ...
-
-        if self.type == "Teachers":
-            permissions['canSendToBreakouts'] = True
-            ...
+    def add_to_class(self, class_name, role_type):
+        '''
+        Added key value pair ofr class id and object role_type.
+        '''
+        self.classes[class_name] = role_type
+    
+    def login(self, uri, token):
+        '''
+        Runs Google OAuth, checks email and loads user permissions
+        '''
+        if run_google_oauth(token, return=UserEmail) == self.email:
+            return self.classes[uri]
         
-        if self.type == "Staff":
-            permissions['SuperUser'] = True
-        
-        return permissions
+class Student(User):
+    def __init__(self, user):
+        super().__init__()
+        self.key_bindings = {'h' : self.hand(),
+                             'y' : self.yes()}
+
+    def hand(self):
+        ...
+    
+class Professor(User):
+    def __init__(self):
+        super().__init__()
+        self.key_bindings = {'k' : self.talk_time(),
+                             'cmd+1': self.send_to_breakouts()}
+    
+    def talktime(self):
+        ....
+
+class TA(Student):
+    def __init__(self):
+        super().__init__()
+        self.key_bindings = {'t' : self.run_internet_check()}
+
+    def run_internet_check(self):
+
 ```
 
 ### Q2. Bug or feature?
