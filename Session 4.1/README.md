@@ -76,4 +76,4 @@ students.  How well does your design separate out different concerns?
 discouraged as we will be interested in the variety of solutions that students
 obtained in class.*
 
-<img src="sc_2.png">
+<img src="IMG_1133.jpg">
