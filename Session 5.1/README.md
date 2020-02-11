@@ -55,8 +55,16 @@ runnable using the `run()` method. If it simplifies your code, then you can
 assume a finite-sized list of automata.  You can also choose the simplest
 initialization for your automaton.
 
-```python
+```bash
 python3 rule90.py
+
+Initializing 1d array, len 5.
+Array initialized, step 0: [False, True, False, False, True].
+On step 1, arr looks like [True, True, True, False, False].
+On step 2, arr looks like [True, False, False, False, False].
+On step 3, arr looks like [False, False, False, False, False].
+On step 4, arr looks like [False, False, False, False, False].
+On step 5, arr looks like [False, False, False, False, False].
 ```
 
 3. Using your code from the previous session on creating a `ClockIterator`,
@@ -67,8 +75,14 @@ write test code for the situations given below.
     4. The 1440th thing returned  from a `ClockIterator` should be the string "23:59".
     5. The 1441st thing returned  from a `ClockIterator` should be the string "00:00".
 
-```python
+```bash
 python3 ClockIterTest.py
+
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.008s
+
+OK
 ```
 
 4. Think about the subsystem for the final project that you are working on.  

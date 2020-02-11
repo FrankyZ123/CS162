@@ -42,5 +42,5 @@ class rule90(AbstractSimulation):
         print("On step {}, arr looks like {}.".format(self.iter, self.arr))
         
 if __name__ == "__main__":
-    lets_see = rule90(10)
+    lets_see = rule90(5)
     lets_see.run()
