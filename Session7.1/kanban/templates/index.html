@@ -5,12 +5,13 @@
         <title> Todones </title>
     </head>
 
+    <h2>Add a New Task</h2>
     <form action="/add" method="POST">
-        <label for="ToDo's">ToDo</label><br>
         <input type="text" id="task" name="task" value=""><br>
         <input type="submit" value="Add Task">
     </form>
 
+    <h2>ToDos</h2>
     <form action="/done" method="POST">
         <label for="Working"></label>
         {% for todo in todos %}
@@ -20,6 +21,7 @@
         <input type="submit" value="Check Off"><p>Note: this can only handle one task at a time</p>
     </form>
     
+    <h2>ToDones</h2>
     {% for todone in todones %}
         <s>{{todone.text}}</s><br>
     {% endfor %}
